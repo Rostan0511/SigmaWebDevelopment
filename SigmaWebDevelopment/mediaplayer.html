@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player</title>
+    <style>
+
+        nav {
+            background-color: burlywood;
+        }
+        nav li:hover{
+            transform: scale(1.2);
+        }
+        body {
+            background: url(sources/ink.mp4);
+        }
+
+        #menu{
+            display: flex;
+            justify-content: center;
+        }
+
+        .navitem{
+            list-style: none;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #audiolist{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            list-style: none;
+        
+            
+        }
+
+        .audio{
+            background: #000;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: purple 2px 2px 2px 2px;
+        }
+
+        #audiolist li:hover , #videolist li:hover {
+            transform: scale(1.2);
+
+        }
+
+        #videolist{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            list-style: none;
+        }
+
+        .video{
+            margin: 20px;
+           
+          
+            box-shadow: purple 2px 2px 2px 2px;
+            
+        }
+
+        h1, h2 {
+            color: white;
+        }
+
+        .video-background {
+            position: fixed;
+            right: -250px;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <video autoplay muted loop class="video-background">
+            <source src="ink.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <nav>
+            <ul id="menu">
+                <li class="navitem"><a href="#audiolist">Audio Section</a></li>
+                
+                <li class="navitem"><a href="#videolist">Video Section</a></li>
+
+            </ul>
+        
+    </nav>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin-bottom: 20px;">Media Player</h1>
+        <h2 style="text-align: center; margin-top: 20px;">Audio</h2>
+        <ul id="audiolist">
+            <li class="audio" ><audio src="https://www.w3schools.com/html/horse.ogg" controls>Play me</audio></li>
+            <li class="audio"><audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls></audio></li>
+            <li class="audio"><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></li>
+            <li class="audio"><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></li>
+            <li class="audio"><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></li>
+            <li class="audio"><audio src="https://www.w3schools.com/html/horse.ogg" controls></audio></li>
+        </ul>
+
+        <h2 style="text-align: center; margin-top: 20px;">Video</h2>
+        <ul id="videolist">
+            <li class="video"><video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted loop autoplay></video></li>
+            <li class="video"><video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video></li>
+            <li class="video"><video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted loop autoplay></video></li>
+            <li class="video"><video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted loop autoplay></video></li>
+            <li class="video"><video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted loop autoplay></video></li>
+            <li class="video"><video src="https://www.w3schools.com/html/mov_bbb.mp4" controls muted loop autoplay></video></li>
+        </ul>
+
+       
+    </main>
+</body>
+</html>
